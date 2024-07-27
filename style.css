@@ -1,0 +1,540 @@
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    color: aliceblue;
+}
+nav{
+    display: flex;
+    /* justify-content: end; */
+    justify-content: space-between;
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+    box-shadow: 0px 4px 7px 4px rgb(24, 24,24,0.5);
+    position: fixed;
+    /* z-index:; */
+    opacity: calc(3);
+    /* width: 100px; */
+    width: 100%;
+    
+    top: 0%;
+}
+nav ul a{
+    position: relative;
+
+    text-decoration: none;
+    color: aliceblue;
+    margin-inline: 30px;
+    letter-spacing: 2px;
+
+}
+nav ul a:after{
+    content: "";
+    position: absolute;
+    background-color: dodgerblue ;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    bottom: -10px;
+    transition: 0.3s;
+}
+nav ul a:hover{
+    color: aqua;
+}
+nav ul a:hover:after{
+    width: 100%;
+}
+nav button{
+    width: 80px;
+    height: 28px;
+    background-color: brown;
+    font-size: 18px;
+    border-radius: 2px;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+nav button:hover{
+    border: 3px solid blue;
+    border-radius: 7px;
+    background-color: transparent;
+    font-weight: 600;
+    /* padding: 10px; */
+    /* width: 90px; */
+    /* transform: scale(1.1); */
+}
+nav ul{
+    margin-right: 33px;
+
+}
+.logo{
+    /* position: absolute; */
+    margin-left: 22px;
+     /* padding-left: 10px; */
+}
+.logo h1{
+    position: absolute;
+    top: -8px;
+    font-size: 33px;
+    font-family: 'Courgette', cursive;
+    color: dodgerblue;
+    border-radius: 3px;
+    border-bottom: 4px solid dodgerblue;
+    border-bottom-right-radius: 22px;
+    letter-spacing: 2px;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding: 100px;
+    /* position: relative; */
+    /* animation: change 20s linear infinite  ; */
+}
+.main .mainText h1{
+    font: 47px;
+    letter-spacing: 3px;
+    font-variant: small-caps;
+    text-shadow: 1.5px 1.5px dodgerblue;
+    border-right: 5px solid dodgerblue;
+    border-top: 3px soild dodgerblue;
+    border-bottom: 3px solid dodgerblue;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+    typing 4s ,
+    cursor 4s linear infinite alternate;
+    animation-direction: alternate;
+}
+/* .main .mainText h1::before{
+    content: "JOMATO";
+    font-size: 16px;
+    color: dodgerblue;
+    
+} */
+.main .mainText h2::first-letter{
+    /* color: #0097e6; */
+    font-size: 30px;
+}
+@keyframes cursor {
+50%{
+    /* border-color: red; */
+}    
+}
+@keyframes typing {
+    from{width: 0;}
+    To{
+        width: 81%;
+        color: dodgerblue;
+    }
+}
+.main .mainText h2{
+    font: 33px;
+    letter-spacing: 3px;
+    font-variant: small-caps;
+    color: blue;
+    animation: shine;
+    animation-timing-function: linear;
+    /* animation-timing-function: ease-in-out; */
+    /* animation-duration: 0s; */
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes shine {
+    0%{
+        color: dodgerblue;
+    }
+    50%{
+        color: red;
+    }
+    75%{
+        color: aliceblue;
+    }
+    100%{
+        color: dodgerblue;
+    }
+    
+}
+.main .mainText p{
+    color: silver;
+    line-height: 30px;
+}
+ .mainText button{
+    width: 150px;
+    height: 45px;
+    border-radius: 7px;
+    background: #7d2ae8;
+    background-color: brown;
+    color: aliceblue;
+    border: none;
+    font-size: 17px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+
+
+}
+.mainText button:active{
+    transform: scale(1.1);
+}
+.mainText button:hover{
+    /* border: 4px solid dodgerblue; */
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px aqua;
+}
+.main img{
+    /* &:hover{
+        rotate: (-45deg) ;
+        transform-origin: right;
+    } */
+    /* transition: all 0.5s linear; */
+ width: 20%;
+ border-radius: 7px;
+ /* box-shadow: -4px 4px 4px 4px  dodgerblue;
+  */
+  box-shadow: 0 0 0 5px dodgerblue;
+ /* transform: translate(2); */
+ /* background-image: url('main.jpg'); */
+ animation: change 2s linear infinite alternate ;
+}
+/* .main img:hover{
+        transform: rotate(-20deg);
+        transform-origin: right;
+} */
+
+@keyframes change {
+    0%{
+        /* background-image: url('./images/Cakes.jpg');
+         width: 50%; */
+         rotate: 15deg;
+    }
+    50%{
+        /* background-image: url('./images/Momos.jpg');
+         */
+         rotate: 0deg;
+    }
+    100%{
+        rotate: -15deg;
+
+    } 
+    
+} 
+
+.heading{
+    text-align: center;
+    /* margin-top: 5px; */
+    padding: 65px;
+    letter-spacing: 2px;
+
+    
+}
+.heading span{
+    letter-spacing: 3px;
+    color: rgb(53,151,249);
+    font-variant: small-caps;
+    /* font-weight: 900;
+     */
+     font-size: 35px;
+     border-bottom: 4px solid dodgerblue;
+
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.cards .crd{
+    width: 300px;
+    margin-inline: 22px;
+    background-color: aliceblue;
+    color: black;
+}
+.foodText button{
+    width: 100px;
+    height: 30px;
+    background-color: brown;
+    color: aliceblue;
+    font-size: 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+.crd .foodText{
+    padding: 22px;
+}
+.crd .foodText::first-letter{
+    font-size: 28px;
+    color: #0097e6;
+}
+.crd img{
+    width: 100%;
+}
+.crd:hover{
+    background: rgb(98, 167, 237);
+    color: black;
+}
+.best{
+    display: flex;
+    width: 800px;
+    background-color: aliceblue;
+    color: black;
+    margin-top: 30px;
+    margin-left: 20%;
+    /* justify-content: center; */
+}
+.best img{
+    width: 40%;
+    border-radius: 7px;
+}
+.best .bestText{
+    padding: 22px;
+}
+.bestText{
+    text-align: center;
+}
+
+.bestText img{
+    border-radius: 50%;
+}
+.bestText button{
+    width: 130px;
+    height: 33px;
+    background-color: brown;
+    color: aliceblue;
+    font-size: 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.order{
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+}
+.orderText i{
+    font-size: 187px;
+    color: dodgerblue;
+    /* padding-right: 15px; */
+}
+.orderText{
+    margin-inline: 100px;
+    /* margin-left: 5px; */
+
+}
+.orderText i:hover{
+    color: red;
+}
+.orderText button{
+    width: 130px;
+    height: 36px;
+    background-color: brown;
+    color: aliceblue;
+    border: none;
+    font-size: 17px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    border-radius: 7px;
+
+
+}
+.orderText button:active{
+    transform: scale(1.1);
+}
+.orderText button:hover{
+    /* border: 4px solid dodgerblue; */
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px aqua;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: aliceblue;
+    padding: 45px;
+    margin-top: 80px;
+    font-size: 15px;
+    font-weight: bold;
+    border-top: 3px solid dodgerblue;
+}
+.footer .text h2{
+    color: dodgerblue;
+    letter-spacing: 2px;
+    
+}
+.track{
+
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    margin-top: 30px;
+    /* display: none; */
+ }
+ .track img{
+    width: 20%;
+    border-radius: 7px;
+ }
+ .loginPage{
+    display: none;
+    width: 190px;
+    padding: 22px;
+    background-color: rgb(166, 195, 220);
+    /* background-color: transparent; */
+    position: absolute;
+    margin-left: 81%;
+    top: 15%;
+    margin-top: 3px;
+    text-align: center;
+ }
+ .loginPage input{
+    width: 170px;
+    padding: 4px;
+    border: 2px solid blue;
+    outline: none;
+    margin-top: 11px;
+ }
+ .loginPage button{
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 13px;
+ }
+ .loginPage button:active{
+    transform: scale(1.1);
+}
+.loginPage button:hover{
+    /* border: 4px solid dodgerblue; */
+    background-color: transparent;
+    cursor: pointer;
+    /* box-shadow: 2px 2px 2px 2px aqua; */
+}
+.social{
+    /* height: 65px;
+    width: 65px; */
+    /* border: 5px soild red;
+     */
+     display: flex;
+     text-align: center;
+    border-top: 3px solid dodgerblue;
+
+     /* flex-direction: column; */
+     
+     justify-content: center;
+     align-items: center;
+     
+     /* margin-inline:200px; */
+     /* margin: 10px; */
+}
+.social a{
+    margin-top: 15px;
+
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 25px;
+    background-color:aliceblue;
+    margin-inline: 10px;
+    /* text-align: left; */
+    /* justify-content: space-between; */
+    margin: 15px;
+    line-height: 60px;
+    /* box-shadow: 1px 4px 2px 2px grey; */
+  box-shadow: 0 0 0 8px  gray;
+
+}
+.social a i{
+transition: all 0.3s linear;
+}
+
+.social a:hover i{
+    transform: scale(1.2);
+  /* box-shadow: 0 0 0 5px dodgerblue; */
+
+}
+.fa-facebook{
+color: rgb(65, 161, 239);
+}
+.fa-instagram{
+    color: #e84393;
+}
+.fa-twitter{
+    color: #0097e6;
+}
+.fa-linkedin{
+color: #0097e6;
+}
+.copyRight{
+    text-align: center;
+    background-color: black;
+    color: dodgerblue;
+}
+
+/* loader css */
+      
+      /* html {
+        font-size: 62.5%;
+      } */
+      /* .mainloader {
+        height: 100vh;
+
+        width: 100vw;
+        display: flex;
+       justify-content: center;
+        align-items: center;
+        background-color: black;
+      } */
+      .loader {
+        width: 20rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        position: relative;
+        background-color: peru;
+        display: grid;
+       place-items: centre;
+       animation: circle 2s linear infinite reverse;
+      }
+      @keyframes circle {
+        100%{
+           rotate: 360deg;
+        }
+        
+      }
+      .loader::before{
+        content: "";
+        background-color: black;
+        position: absolute;
+         aspect-ratio: 1;
+        top: 0;
+        left: 0;
+        width: 17rem;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .loader::after{
+        content: "";
+        background-color: black;
+        position: absolute;
+         aspect-ratio: 1;
+        top: -2.5rem;
+        left: 8.5rem;
+        width: 5rem;
+        border-radius: 50%;
+        z-index: 1;
+        background-color: peru;
+        box-shadow: 0 0 1rem peru, 0 0 1.5rem peru, 0 0 2rem peru, 0 0 2.5rem peru, 0 0 3rem peru;
+      }
